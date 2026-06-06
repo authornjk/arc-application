@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ARC & Scream Team — Diving Into the Sun</title>
+  <script async src="https://tally.so/widgets/embed.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -37,27 +38,10 @@
     .date-card.accent .date-lbl { color: #854F0B; }
     .date-val { font-family: 'Playfair Display', serif; font-size: 19px; font-weight: 700; color: #2C1A0E; }
     .date-card.accent .date-val { color: #412402; }
-    .form-card { background: #fff; border: 0.5px solid #E8C98A; border-radius: 14px; padding: 1.75rem; }
-    .form-title { font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 700; color: #2C1A0E; margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 0.5px solid #F0DEB8; }
-    .field { margin-bottom: 1.35rem; }
-    .section-label { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #9A6B2E; font-weight: 500; margin-bottom: 7px; display: block; }
-    input[type="text"], input[type="email"] { width: 100%; background: #FFFDF8; border: 0.5px solid #D4B483; border-radius: 8px; padding: 11px 14px; font-family: 'DM Sans', sans-serif; font-size: 15px; color: #2C1A0E; outline: none; transition: border-color 0.15s, box-shadow 0.15s; }
-    input[type="text"]:focus, input[type="email"]:focus { border-color: #EF9F27; box-shadow: 0 0 0 3px rgba(239,159,39,0.15); }
-    textarea { width: 100%; background: #FFFDF8; border: 0.5px solid #D4B483; border-radius: 8px; padding: 11px 14px; font-family: 'DM Sans', sans-serif; font-size: 15px; color: #2C1A0E; outline: none; resize: vertical; min-height: 90px; line-height: 1.55; transition: border-color 0.15s, box-shadow 0.15s; }
-    textarea:focus { border-color: #EF9F27; box-shadow: 0 0 0 3px rgba(239,159,39,0.15); }
-    .option-card { display: flex; align-items: center; gap: 11px; padding: 11px 14px; background: #FFFDF8; border: 0.5px solid #D4B483; border-radius: 8px; cursor: pointer; transition: border-color 0.15s, background 0.15s; font-size: 14.5px; color: #2C1A0E; user-select: none; margin-bottom: 8px; line-height: 1.4; }
-    .option-card:last-child { margin-bottom: 0; }
-    .option-card:hover { border-color: #EF9F27; background: #FAEEDA; }
-    .option-card.selected { border-color: #EF9F27; background: #FAEEDA; }
-    .option-card input { accent-color: #EF9F27; width: 16px; height: 16px; flex-shrink: 0; }
-    .submit-btn { width: 100%; padding: 14px; background: #BA7517; color: white; border: none; border-radius: 8px; font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 500; cursor: pointer; margin-top: 1.5rem; transition: background 0.15s, transform 0.1s; letter-spacing: 0.02em; }
-    .submit-btn:hover { background: #854F0B; }
-    .submit-btn:active { transform: scale(0.99); }
-    .fine-print { text-align: center; font-size: 12px; color: #9A6B2E; margin-top: 1rem; line-height: 1.6; }
-    .success-msg { display: none; text-align: center; padding: 3rem 1.5rem; background: #FAEEDA; border: 0.5px solid #FAC775; border-radius: 14px; margin-top: 1.5rem; }
-    .success-msg .s-title { font-family: 'Playfair Display', serif; font-size: 26px; font-style: italic; color: #412402; margin-bottom: 0.6rem; }
-    .success-msg .s-sub { font-size: 15px; color: #854F0B; line-height: 1.7; }
-    @media (max-width: 500px) { .hero { grid-template-columns: 120px 1fr; gap: 1rem; } .cover-img { width: 120px; } .form-card { padding: 1.25rem; } }
+    .form-card { background: #fff; border: 0.5px solid #E8C98A; border-radius: 14px; padding: 1.75rem 1.75rem 0.5rem; }
+    .form-title { font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 700; color: #2C1A0E; margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 0.5px solid #F0DEB8; }
+    .tally-wrap { min-height: 520px; }
+    @media (max-width: 500px) { .hero { grid-template-columns: 120px 1fr; gap: 1rem; } .cover-img { width: 120px; } .form-card { padding: 1.25rem 1.25rem 0.5rem; } }
   </style>
 </head>
 <body>
@@ -114,100 +98,11 @@
 
     <div class="form-card">
       <p class="form-title">Apply to join the team &#9728;</p>
-      <div id="app-form">
-        <form id="the-form">
-          <div class="field">
-            <label class="section-label" for="name">Your name</label>
-            <input type="text" id="name" name="name" placeholder="Full name" required />
-          </div>
-          <div class="field">
-            <label class="section-label" for="email">Email address</label>
-            <input type="email" id="email" name="email" placeholder="you@example.com" required />
-          </div>
-          <div class="field">
-            <label class="section-label" for="instagram">Instagram handle</label>
-            <input type="text" id="instagram" name="instagram" placeholder="@yourusername" required />
-          </div>
-          <div class="field">
-            <span class="section-label">Have you been on an ARC team before?</span>
-            <label class="option-card"><input type="radio" name="experience" value="Yes, seasoned ARC reader" required /> Yes&#8212;I&#8217;m a seasoned ARC reader</label>
-            <label class="option-card"><input type="radio" name="experience" value="First time, but so ready" /> This would be my first time, but I am so ready</label>
-            <label class="option-card"><input type="radio" name="experience" value="Some experience, nothing official" /> I&#8217;ve read early copies before but nothing official</label>
-          </div>
-          <div class="field">
-            <span class="section-label">What kind of content do you post?</span>
-            <label class="option-card"><input type="checkbox" name="content" value="Feed posts" /> Feed posts / static photos</label>
-            <label class="option-card"><input type="checkbox" name="content" value="Reels" /> Reels / videos</label>
-            <label class="option-card"><input type="checkbox" name="content" value="Stories" /> Stories</label>
-            <label class="option-card"><input type="checkbox" name="content" value="All of the above" /> All of the above&#8212;I go all out</label>
-          </div>
-          <div class="field">
-            <label class="section-label" for="extra">Why are you the perfect screamer for this book? (optional)</label>
-            <textarea id="extra" name="extra" placeholder="Sell us on yourself&#8212;we want to know your vibe..."></textarea>
-          </div>
-          <button type="submit" class="submit-btn">I want in&#8212;apply now &#9728;</button>
-          <p class="fine-print">Applications are reviewed personally. You&#8217;ll hear back before ARCs go out on July 1st.</p>
-        </form>
-      </div>
-      <div class="success-msg" id="success-msg">
-        <p class="s-title">You&#8217;re on our radar!</p>
-        <p class="s-sub">Keep an eye on your DMs&#8212;we&#8217;ll be in touch before July 1st.<br>Get ready to dive in. &#9728;</p>
+      <div class="tally-wrap">
+        <iframe data-tally-src="https://tally.so/r/VLNVO6?transparentBackground=1" width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0" title="DITS Scream Team application" style="min-height:520px;"></iframe>
       </div>
     </div>
+
   </div>
-
-  <script>
-    document.querySelectorAll('input[type="radio"]').forEach(r => {
-      r.addEventListener('change', function() {
-        document.querySelectorAll('input[name="experience"]').forEach(x => x.closest('.option-card').classList.remove('selected'));
-        this.closest('.option-card').classList.add('selected');
-      });
-    });
-    document.querySelectorAll('input[type="checkbox"]').forEach(cb => {
-      cb.addEventListener('change', function() {
-        if (this.checked) this.closest('.option-card').classList.add('selected');
-        else this.closest('.option-card').classList.remove('selected');
-      });
-    });
-
-    document.getElementById('the-form').addEventListener('submit', async function(e) {
-      e.preventDefault();
-      const name = document.getElementById('name').value.trim();
-      const email = document.getElementById('email').value.trim();
-      const ig = document.getElementById('instagram').value.trim();
-      const exp = document.querySelector('input[name="experience"]:checked');
-      const content = [...document.querySelectorAll('input[name="content"]:checked')].map(c => c.value);
-      if (!name || !email || !ig || !exp || content.length === 0) {
-        alert('Please fill in all required fields before applying!');
-        return;
-      }
-      const btn = document.querySelector('.submit-btn');
-      btn.textContent = 'Submitting...';
-      btn.disabled = true;
-
-      const data = new URLSearchParams();
-      data.append('name', name);
-      data.append('email', email);
-      data.append('instagram', ig);
-      data.append('experience', exp.value);
-      data.append('content_types', content.join(', '));
-      data.append('extra', document.getElementById('extra').value);
-
-      try {
-        await fetch('https://tally.so/r/QKkWYX', {
-          method: 'POST',
-          mode: 'no-cors',
-          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-          body: data.toString()
-        });
-        document.getElementById('app-form').style.display = 'none';
-        document.getElementById('success-msg').style.display = 'block';
-      } catch(err) {
-        btn.textContent = 'I want in—apply now ☀';
-        btn.disabled = false;
-        alert('Something went wrong—please try again!');
-      }
-    });
-  </script>
 </body>
 </html>
